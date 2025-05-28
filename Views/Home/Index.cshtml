@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .head {
+            background-color: #333333; /* Black-gray color */
+            color: white; /* White text for contrast */
+            padding: 50px;
+            text-align: center;
+        }
+
+        .image {
+            width: 100%;
+            height: 40vh;
+            background-image: url('../images/MainPage.png'); /* Ensure text is readable */
+            background-size: cover; /* Ensures the image covers the entire div */
+            background-position: center; /* Centers the image */
+            color: white; /* Makes the text stand out on the background */
+            padding: 50px; /* Adds space inside the div */
+            text-align: center; /* Centers the text */
+        }
+    </style>
+</head>
+<body>
+    <div class="head">
+        <h1>Educational Technology Apps</h1>
+        <h2>How can technology enhance your learning experience?</h2>
+        <p class="lead">
+            Creating practical tutorials to support and enhance the effective use of educational technology in teaching and learning.
+        </p>
+    </div>
+
+    <div class="image">
+
+    </div>
+
+    <div class="row">
+        <div class="col-md-4">
+            <h2>
+                Educational Technology Tools
+            </h2>
+            <p>
+                Educational technology applications are designed to enhance the learning process by integrating digital tools.
+                They help both educators and learners by offering interactive content and promoting collaboration.
+                These applications aim to improve learning outcomes by incorporating technology into everyday educational experiences.
+            </p>
+            <p><a class="btn btn-default" href="@Url.Action("EdTechPage", "Home")">Learn more &raquo;</a></p>
+        </div>
+        <div class="col-md-4">
+            <h2>
+                E-Evaluation Tools
+            </h2>
+            <p>
+                These tools include formative and summative assessments, quizzes, rubrics, surveys, and analytics platforms that provide
+                insights into student progress. Modern educational technologies integrate AI-driven assessments,
+                adaptive learning platforms, and real-time feedback systems to enhance personalized learning
+                and data-driven decision-making. By utilizing evaluation tools, educators can improve teaching strategies and ensure
+                better student achievement.
+            </p>
+            <p><a class="btn btn-default" href="@Url.Action("EEvaluationPage", "Home")">Learn more &raquo;</a></p>
+        </div>
+        <div class="col-md-4">
+            <h2>
+                AI in Education
+            </h2>
+            <p>
+                AI in education empowers teachers by personalizing learning experiences for each student.
+                It helps educators tailor lessons to individual needs and automates time-consuming tasks such as grading and assessments.
+                With AI, teachers can provide real-time feedback, track student progress more efficiently, and enhance classroom engagement.
+            </p>
+            <p><a class="btn btn-default" href="@Url.Action("AIInEducationPage", "Home")">Learn more &raquo;</a></p>
+        </div>
+    </div>
+</body>
+</html> 

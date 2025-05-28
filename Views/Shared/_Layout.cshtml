@@ -1,0 +1,109 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown .submenu {
+            display: none;
+            position: absolute;
+            left: 0;
+            top: 100%;
+            background: white;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 0;
+            list-style: none;
+            min-width: 150px;
+        }
+
+        .dropdown:hover .submenu {
+            display: block;
+        }
+
+        .submenu li {
+            padding: 10px;
+        }
+
+            .submenu li a {
+                text-decoration: none;
+                color: black;
+                display: block;
+            }
+
+                .submenu li a:hover {
+                    background-color: #007bff;
+                    color: white;
+                }
+
+        .logo {
+            width: 50px;
+            height: 50px;
+            background-image: url('../images/EdtTechLogo.png'); /* Ensure text is readable */
+            background-size: cover; /* Ensures the image covers the entire div */
+            /*background-position: left;*/ /* Centers the image */
+            background-color: #333333; /* Makes the text stand out on the background */
+            /*padding: 50px;*/ /* Adds space inside the div */
+            text-align: center; /* Centers the text */
+        }
+    </style>
+
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EdTech</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body> 
+    <div class="navbar navbar-inverse navbar-fixed-top">       
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+
+                </button>
+                @Html.ActionLink("EDTECH", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li class="logo"></li>
+                    <li>@Html.ActionLink("HOME", "Index", "Home")</li>
+                    <li class="dropdown">
+                        @Html.ActionLink("TOOLS", "Index", "Home", null, new { @class = "dropdown-toggle" })
+                        <ul class="submenu">
+                            <li>@Html.ActionLink("EdTech", "EdTechPage", "Home")</li>
+                            <li>@Html.ActionLink("E-Evaluation", "EEvaluationPage", "Home")</li>
+                            <li>@Html.ActionLink("AI In Education", "AIInEducationPage", "Home")</li>
+                            <li>@Html.ActionLink("Search For Your Tool", "SearchForTool", "Home")</li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        @Html.ActionLink("ABOUT US", "Index", "Home", null, new { @class = "dropdown-toggle" })
+                        <ul class="submenu">
+                            <li>@Html.ActionLink("Our Mission", "Mission", "Home")</li>
+                            <li>@Html.ActionLink("Our Team", "Team", "Home")</li>
+                            <li>@Html.ActionLink("Contact Us", "Contact", "Home")</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; Copyright EdTech 2025 - All rights reserved</p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

@@ -1,0 +1,252 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+</head>
+<body>
+    <div class="row align-items-center my-4 p-4 bg-light rounded shadow-sm animate__animated animate__fadeIn" style="padding-top:50px">
+        <div class="col-md-8">
+            <h2 class="text-primary fw-bold mb-3">
+                🌐 Educational Technology Tools
+            </h2>
+            <p class="lead">
+                Educational technology applications <strong>transform learning</strong> by integrating powerful digital tools.
+                They empower educators and learners with <span class="text-success">interactive content</span> and promote real-time collaboration.
+                <br /><br />
+                These tools enhance learning outcomes by blending innovation into everyday experiences — enabling users to design, customize, and share
+                <em>engaging educational activities</em> and multimedia resources.
+            </p>
+            <a href="#options" class="btn btn-primary mt-3">Explore Tools ↓</a>
+        </div>
+
+    </div>
+
+    <div class="row align-items-center my-4 p-4 bg-white rounded shadow-sm animate__animated animate__fadeInUp">
+        <div class="col-md-6">
+            <label for="options" class="form-label fs-5 fw-semibold text-primary">
+                🎯 Choose an Educational App:
+            </label>
+            <select id="options" name="options" class="form-select form-select-lg" onchange="showContent()">
+                <option value="">-- Select an option --</option>
+                <option value="IdQuizlet">Quizlet</option>
+                <option value="IdWordwall">Wordwall</option>
+                <option value="IdHotPotatoes">Hot Potatoes</option>
+                <option value="IdPadlet">Padlet</option>
+                <option value="IdEducandy">Educandy</option>
+                <option value="IdGenially">Genially</option>
+                <option value="IdNearpod">NearPod</option>
+            </select>
+            <small class="form-text text-muted mt-2">
+                Selecting an app will display details, tutorials, and videos below.
+            </small>
+        </div>
+        @*<div class="col-md-6 text-center d-none d-md-block">
+                <img src="../images/select_tool.svg" alt="Select Tool Illustration" class="img-fluid" style="max-height: 200px;">
+            </div>*@
+    </div>
+    <div class="row">
+        <div class="col-md-8">
+            <div id="content" class="content animate__animated animate__fadeIn"></div>
+         </div>
+    </div>
+
+        <script>
+            function showContent() {
+                const dropdown = document.getElementById("options");
+                const contentDiv = document.getElementById("content");
+
+                // Content related to each option
+                const content = {
+                    IdQuizlet: `                              
+                                <div class="row">
+                                  <iframe width="560" height="315" 
+                                          src="https://www.youtube.com/embed/J0gfDsEoZ7w" 
+                                          title="YouTube video player" 
+                                          frameborder="0" 
+                                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                          allowfullscreen>
+                                  </iframe>
+                                </div>
+                                <div class="row">
+                                  <div class="col-md-12">
+                                    <h1><a href="https://youtu.be/J0gfDsEoZ7w" target="_blank">Quizlet</a></h1>                                          
+                                    <h2>By Charbel Moussallem</h2>
+                                    <p>
+                                      Quizlet is an online learning platform that provides tools for students and educators to create, share, and study educational content:
+                                      <a href="https://youtu.be/J0gfDsEoZ7w" target="_blank"><b>Introduction</b></a>,
+                                      <a href="https://youtu.be/YfhQgtlpQLA" target="_blank"><b>Content</b></a>,
+                                      <a href="https://youtu.be/-xKvOTvcyMM" target="_blank"><b>Search1</b></a>,
+                                      <a href="https://youtu.be/E7z8Hg6nyyk" target="_blank"><b>Search2</b></a>,
+                                      <a href="https://youtu.be/0M0FVhbELUE" target="_blank"><b>Create1</b></a>,
+                                      <a href="https://youtu.be/eIxwL4HLAqc" target="_blank"><b>Create2</b></a>,
+                                      <a href="https://youtu.be/DjhLkmJEOlA" target="_blank"><b>Create3</b></a>,
+                                      <a href="https://youtu.be/NBJAzCpiYu8" target="_blank"><b>Quizlet AI</b></a>,
+                                      <a href="https://youtu.be/rXtjL1GwIW8" target="_blank"><b>Final</b></a>
+                                    </p>
+                                  </div>
+                                </div>
+                                `,
+                    IdWordwall: `                              
+                                <div class="row">
+                                  <iframe width="560" height="315" 
+                                          src="https://www.youtube.com/embed/pmP-AzgL5A4" 
+                                          title="YouTube video player" 
+                                          frameborder="0" 
+                                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                          allowfullscreen>
+                                  </iframe>
+                                </div>                                    
+                                <div class="row">
+                                  <div class="col-md-12">
+                                            <h1><a href="https://youtu.be/pmP-AzgL5A4" target="_blank">Wordwall</a></h1>
+                                            <h2>By Ghada Mansour</h2>
+                                            <p><a href="https://youtu.be/pmP-AzgL5A4" target="_blank"><b>Wordwall</b></a> is an interactive digital tool that allows educators to create engaging learning activities
+                                               such as quizzes, word searches, and matching games. It supports both online and printable formats,
+                                               making it versatile for classroom use.
+                                            </p>
+                                        </div>
+                                    </div>
+                                `,
+                    IdHotPotatoes: `                              
+                                <div class="row">
+                                  <iframe width="560" height="315" 
+                                          src="https://www.youtube.com/embed/kz-THR8re6U" 
+                                          title="YouTube video player" 
+                                          frameborder="0" 
+                                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                          allowfullscreen>
+                                  </iframe>
+                                </div>           
+                                 <div class="row">
+                                  <div class="col-md-12">
+                                            <h1><a href="https://youtu.be/kz-THR8re6U" target="_blank">Hot Potatoes</a></h1>
+                                            <h2>By Nina Zgheib</h2>
+                                            <p>It is a suite of tools designed to help educators create interactive web-based learning materials.
+                                                  Developed by the University of Victoria, it allows users to build a variety of educational exercises with minimal technical expertise.
+                                                  The tools within Hot Potatoes include:
+                                                    <br><a href="https://youtu.be/cbVf7QU3HRg" target="_blank"><b>JQuiz</b></a>,
+                                                    <a href="https://youtu.be/cIrPUzVghHY" target="_blank"><b>JCloze</b></a>,
+                                                    <a href="https://youtu.be/3JSBZ5iYvYY" target="_blank"><b>JCross</b></a>,
+                                                    <a href="https://youtu.be/O-CJ4BE2idw" target="_blank"><b>JMix</b></a>,
+                                                    <a href="https://youtu.be/bKhsF7FeV3ow" target="_blank"><b>JMatch</b></a>,
+                                                    <a href="https://youtu.be/O-CJ4BE2idw" target="_blank"><b>The Masher</b></a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                `,
+                    IdPadlet: `
+                                <div class="row">
+                                      <iframe width="560" height="315" 
+                                              src="https://www.youtube.com/embed/TkKpgyxH_4Q" 
+                                              title="YouTube video player" 
+                                              frameborder="0" 
+                                              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                              allowfullscreen>
+                                      </iframe>
+                                </div>           
+                                <div class="row">
+                                  <div class="col-md-12">
+                                            <h1><a href="https://youtu.be/TkKpgyxH_4Q" target="_blank">Padlet</a></h1>
+                                            <p>Is a digital collaboration tool that allows users to create interactive boards for sharing ideas,
+                                                documents, and multimedia content. It is widely used in education and teamwork for brainstorming,
+                                                feedback, and organizing information visually.
+                                                <br><a href="https://youtu.be/TkKpgyxH_4Q" target="_blank"><b>Padlet1</b></a>
+                                                <br><a href="https://youtu.be/yETTMc9PWVI" target="_blank"><b>Padlet2</b></a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                `,
+                    IdEducandy: `
+                                <div class="row">
+                                  <iframe width="560" height="315" 
+                                          src="https://www.youtube.com/embed/aJpwPt_z9xc" 
+                                          title="YouTube video player" 
+                                          frameborder="0" 
+                                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                          allowfullscreen>
+                                  </iframe>
+                                </div>           
+                                <div class="row">
+                                  <div class="col-md-12">
+                                            <h1><a href="https://youtu.be/aJpwPt_z9xc" target="_blank">Educandy</a></h1>
+                                            <h2>By Zeinab Darwich</h2>
+                                            <p>Educandy is an online tool that allows teachers to create interactive games and activities for students,
+                                                such as quizzes, word searches, and matching exercises.
+                                                <a href="https://youtu.be/aJpwPt_z9xc" target="_blank"><b>Intro</b></a>,
+                                                <a href="https://youtu.be/t6q9_qQ-ppU" target="_blank"><b>Site Educandy</b></a>,
+                                                <a href="https://youtu.be/sl2rLjb57Pc" target="_blank"><b>Application</b></a>,
+                                                <a href="https://youtu.be/gDu6-_zDjvA" target="_blank"><b>Words</b></a>,
+                                                <a href="https://youtu.be/GSrBtFv6iGo" target="_blank"><b>Matching</b></a>,
+                                                <a href="https://youtu.be/gGgWm55-W0o" target="_blank"><b>Quiz Questions</b></a>,
+                                                <a href="https://youtu.be/cnWZLfwVLZA" target="_blank"><b>Search</b></a>,
+                                                <a href="https://youtu.be/Go9bs1v0W6s" target="_blank"><b>For Students</b></a>,
+                                            </p>
+                                        </div>
+                                  </div>
+                                `,
+                    IdGenially: `
+                                 <div class="row">
+                                      <iframe width="560" height="315" 
+                                              src="https://www.youtube.com/embed/c3QcVCOx19Q" 
+                                              title="YouTube video player" 
+                                              frameborder="0" 
+                                              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                              allowfullscreen>
+                                      </iframe>
+                                </div>        
+                                <div class="row">
+                                  <div class="col-md-12">
+                                            <h1><a href="https://youtu.be/c3QcVCOx19Q" target="_blank">Genially</a></h1>,
+                                            <h2>By Elissa Aoun</h2>
+                                            <p>Genially is an interactive content creation tool that allows users to design engaging presentations,
+                                                infographics, games, and more with animations and multimedia elements.
+                                                <a href="https://youtu.be/c3QcVCOx19Q" target="_blank"><b>Part1</b></a>,
+                                                <a href="https://youtu.be/OEdkwvRUuQI" target="_blank"><b>Part2</b></a>
+                                            </p>
+                                        </div>
+                                 </div>
+                                `,
+                    IdNearpod: `
+                               <div class="row">
+                                      <iframe width="560" height="315" 
+                                              src="https://www.youtube.com/embed/H5TJom65K7E" 
+                                              title="YouTube video player" 
+                                              frameborder="0" 
+                                              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                              allowfullscreen>
+                                      </iframe>
+                                </div>        
+                                <div class="row">
+                                  <div class="col-md-12">
+                                            <h1><a href="https://youtu.be/H5TJom65K7E" target="_blank">Nearpod</a></h1>,
+                                            <h2>By Antonia Haddad</h2>
+                                            <p>Plateforme interactive : Permet de créer et animer des leçons interactives en présentiel ou à distance.
+                                                Intégration multimédia : Supporte des vidéos, quiz, sondages, images, simulations 3D et VR.
+                                                <a href="https://youtu.be/H5TJom65K7E" target="_blank"><b>Definition</b></a>,
+                                                <a href="https://youtu.be/CvDvwup6FPU" target="_blank"><b>Creation</b></a>,
+                                                <a href="https://youtu.be/O9ycNp6BjGQ" target="_blank"><b>Interactivity</b></a>,
+                                                <a href="https://youtu.be/mtr5KWqvA0g" target="_blank"><b>Quiz1</b></a>,
+                                                <a href="https://youtu.be/RH_3kangZHg" target="_blank"><b>Quiz2</b></a>,
+                                                <a href="https://youtu.be/98KJn-ym5QA" target="_blank"><b>Quiz Lunch</b></a>,
+                                                <a href="https://youtu.be/W9fi2wXmBHw" target="_blank"><b>Reports</b></a>.
+                                            </p>
+                                        </div>
+                                 </div>
+                                `
+                };
+
+                // Get selected value
+                const selectedValue = dropdown.value;
+
+                // Display the content if an option is selected
+                if (selectedValue) {
+                    contentDiv.innerHTML = content[selectedValue];
+                    contentDiv.style.display = "block";
+                } else {
+                    contentDiv.style.display = "none";
+                }
+            }
+        </script>
+</body>
+</html>
